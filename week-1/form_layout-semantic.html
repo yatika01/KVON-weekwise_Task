@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Info</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', sans-serif;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, nav, footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+        }
+        header {
+            background: #1e3a5f;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background: #287a6c;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 500px;
+            color: #1e3a5f;
+            flex: 1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        fieldset {
+            border: 2px solid #287a6c;
+            padding: 20px;
+            padding-right: 40px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            position: relative;
+            background: rgba(46, 125, 112, 0.2);
+        }
+        legend {
+            font-weight: bold;
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1e3a5f;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #287a6c;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        input[type="submit"] {
+            background: #1e3a5f;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        input[type="submit"]:hover {
+            background: #287a6c;
+        }
+        .iframe-container {
+            flex: 1;
+            max-width: 750px;
+            height: 900px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Submit Your Information</header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+        <div class="iframe-container">
+            <iframe src="img.html" title="Embedded Content"></iframe>
+        </div>
+
+        <div class="container">
+            <h2>Fill Out This Form</h2>
+            <form action="submission.html" method="get" target="_blank">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name" maxlength="50">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="10" max="100" required>
+                    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                    
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences & Feedback</legend>
+                    <label for="interests">Interests:</label>
+                    <select id="interests" name="interests" multiple>
+                        <option value="sports">Sports</option>
+                        <option value="music">Music</option>
+                        <option value="art">Art</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                    
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback here..."></textarea>
+                    
+                    <label for="rating">Rate Us (1-5):</label>
+                    <input type="range" id="rating" name="rating" min="1" max="5">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Additional Details</legend>
+                    <label for="file">Upload Profile Picture:</label>
+                    <input type="file" id="file" name="file">
+                </fieldset>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>© 2025 All Rights Reserved</footer>
+</body>
+</html>

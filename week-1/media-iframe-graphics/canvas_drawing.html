@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #fff;
+    }
+    canvas {
+        border: 2px solid #ff6f61;
+        width: 90%;
+        height: 80%;
+    }
+</style>
+
+<body>
+    <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(280, 20);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 50);
+
+        ctx.beginPath();
+        ctx.moveTo(150, 90);
+        ctx.bezierCurveTo(140, 60, 100, 60, 100, 100);
+        ctx.bezierCurveTo(100, 140, 150, 160, 150, 180);
+        ctx.bezierCurveTo(150, 160, 200, 140, 200, 100);
+        ctx.bezierCurveTo(200, 60, 160, 60, 150, 90);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+
+        // const img = new Image();
+        // img.src = "https://www.w3schools.com/tags/img_the_scream.jpg"; 
+        // img.onload = function () {
+        //     ctx.drawImage(img, 220, 120, 50, 50);
+        // };
+    </script>
+</body>
+</html>

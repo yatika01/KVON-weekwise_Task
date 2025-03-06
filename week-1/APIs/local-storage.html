@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #e7d5e4;
+            font-size: larger;
+            font-style: italic;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        canvas{
+            display: block;
+            margin: auto;
+            padding-left: 30px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="100" >
+        Sorry, your browser does not support canvas.
+        </canvas>
+        
+        <script>
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+        
+        // Create linear gradient
+        const grad=ctx.createLinearGradient(0,0,280,0);
+        grad.addColorStop(0, "lightblue");
+        grad.addColorStop(1, "darkblue");
+        
+        ctx.font = "50px Arial";
+        ctx.fillStyle = grad;
+        ctx.fillText("Local Storage Example",10,80);
+        </script> 
+
+    <p>Enter your name below, and it will be saved even after you refresh the page.</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="saveName()">Save</button>
+    <button onclick="clearName()">Clear</button>
+
+    <h3 id="greeting"></h3>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById("nameInput").value;
+            if (name) {
+                localStorage.setItem("username", name);
+                displayGreeting();
+            }
+        }
+
+        // Function to display stored name
+        function displayGreeting() {
+            let storedName = localStorage.getItem("username");
+            if (storedName) {
+                document.getElementById("greeting").innerText = "Hello, " + storedName + "!";
+            }
+        }
+
+        function clearName() {
+            localStorage.removeItem("username");
+            document.getElementById("greeting").innerText = "";
+            document.getElementById("nameInput").value = "";
+        }
+
+        // Display stored name on page load
+        window.onload = function() {
+            displayGreeting();
+        };
+    </script>
+
+</body>
+</html>

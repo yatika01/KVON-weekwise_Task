@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://velco.tech/wp-content/uploads/2020/10/adobestock243118595-scaled.jpeg') no-repeat center center/cover;
+            opacity: 0.9; 
+            z-index: -1;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e05247;
+        }
+
+        #demo {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<br><br><br>
+    <h1>🌍 Find Your Location</h1>
+    <p>Click the button below to get your coordinates.</p>
+
+    <button onclick="getLocation()">Get My Location</button>
+
+    <p id="demo">Your coordinates will appear here...</p>
+
+    <script>
+        const x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = `📍 Latitude: ${position.coords.latitude} <br> 📍 Longitude: ${position.coords.longitude}`;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

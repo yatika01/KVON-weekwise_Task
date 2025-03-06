@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        canvas{
+            border: none;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="100" >
+        Sorry, your browser does not support canvas.
+        </canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+        
+        ctx.font = "50px Arial";
+        ctx.fillStyle = "purple";
+        ctx.fillText("Session Storage Example",10,60);
+        </script>
+
+    <p>Enter your name below. It will be saved until you close the tab.</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="saveName()">Save</button>
+    <button onclick="clearName()">Clear</button>
+
+    <h3 id="greeting"></h3>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById("nameInput").value;
+            if (name) {
+                sessionStorage.setItem("username", name);
+                displayGreeting();
+            }
+        }
+
+        // Function to display stored name
+        function displayGreeting() {
+            let storedName = sessionStorage.getItem("username");
+            if (storedName) {
+                document.getElementById("greeting").innerText = "Hello, " + storedName + "!";
+            }
+        }
+
+        function clearName() {
+            sessionStorage.removeItem("username");
+            document.getElementById("greeting").innerText = "";
+            document.getElementById("nameInput").value = "";
+        }
+
+        // Display stored name on page load
+        window.onload = function() {
+            displayGreeting();
+        };
+    </script>
+
+</body>
+</html>

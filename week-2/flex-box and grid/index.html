@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Image Gallery</title>
+    <style>
+        /* Background Gradient */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FLEXBOX GALLERY */
+        .flex-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .flex-gallery .image {
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .flex-gallery .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .flex-gallery .image:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .flex-gallery .image:hover img {
+            opacity: 0.7;
+        }
+
+        /* GRID GALLERY */
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .grid-gallery .image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .grid-gallery .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(50%);
+            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .grid-gallery .image:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        .grid-gallery .image:hover {
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .grid-gallery .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .grid-gallery .image:hover .overlay {
+            opacity: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🌟 Image Gallery 🌟</h1>
+
+    <div class="section">
+        <h2>✨ Flexbox Image Gallery</h2>
+        <div class="flex-gallery">
+            <div class="image"><img src="images.jpg" alt="Image 1"></div>
+            <div class="image"><img src="images (1).jpg" alt="Image 2"></div>
+            <div class="image"><img src="images (2).jpg" alt="Image 3"></div>
+            <div class="image"><img src="download (2).jpg" alt="Image 4"></div>
+            <div class="image"><img src="download (3).jpg" alt="Image 5"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Grid Image Gallery</h2>
+        <div class="grid-gallery">
+            <div class="image">
+                <img src="download (1).jpg" alt="Image 6">
+                <div class="overlay">Image 6</div>
+            </div>
+            <div class="image">
+                <img src="download (4).jpg" alt="Image 7">
+                <div class="overlay">Image 7</div>
+            </div>
+            <div class="image">
+                <img src="download (5).jpg" alt="Image 8">
+                <div class="overlay">Image 8</div>
+            </div>
+            <div class="image">
+                <img src="download.jpg" alt="Image 9">
+                <div class="overlay">Image 9</div>
+            </div>
+            <div class="image">
+                <img src="images (3).jpg" alt="Image 10">
+                <div class="overlay">Image 10</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn">Explore More</button>
+
+</body>
+</html>

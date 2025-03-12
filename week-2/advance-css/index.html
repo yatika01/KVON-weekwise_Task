@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Showcase</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #1E3C72, #2A5298);
+            color: white;
+        }
+        h1 {
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CSS Rounded Corners */
+        .rounded {
+            width: 200px;
+            height: 100px;
+            background: white;
+            color: black;
+            line-height: 100px;
+            border-radius: 20px;
+            margin: 10px auto;
+        }
+
+        /* CSS Border Images */
+        .border-image {
+            border: 10px solid;
+            border-image: url('download.png') 30 round;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        /* CSS Backgrounds & Gradients */
+        .gradient {
+            width: 300px;
+            height: 100px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            line-height: 100px;
+            margin: 10px auto;
+        }
+
+        /* CSS Shadows */
+        .shadow {
+            padding: 20px;
+            background: white;
+            color: black;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+
+        /* CSS Text Effects */
+        .text-effect {
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CSS Transforms */
+        .transform {
+            display: inline-block;
+            padding: 20px;
+            background: #008080;
+            transition: transform 0.3s ease-in-out;
+        }
+        .transform:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* CSS 3D Transform */
+        .transform-3d {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: #4CAF50;
+            transform: rotateY(30deg);
+            transition: transform 0.5s;
+        }
+        .transform-3d:hover {
+            transform: rotateY(180deg);
+        }
+
+        /* CSS Animation */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animated {
+            display: inline-block;
+            padding: 20px;
+            background: #ffcc00;
+            animation: bounce 1s infinite;
+        }
+
+        /* CSS Image Styling & Filters */
+        .styled-image {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            filter: grayscale(50%);
+            transition: filter 0.3s;
+        }
+        .styled-image:hover {
+            filter: grayscale(0%);
+        }
+
+        /* CSS Image Shapes */
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* CSS Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: linear-gradient(to right,  #1E90FF, #4169E1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #4169E1, #1E90FF);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CSS Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* CSS Pagination */
+        .pagination a {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid white;
+            margin: 2px;
+        }
+        .pagination a.active {
+            background-color: white;
+            color: black;
+        }
+        .pagination a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced CSS Showcase</h1>
+    <div class="container">
+        <div class="rounded">Rounded Box</div>
+        <div class="border-image">Border Image</div>
+        <div class="gradient">Gradient Box</div>
+        <div class="shadow">Shadow Box</div>
+        <div class="text-effect">Stylized Text Effect</div>
+        <div class="transform">Hover Me</div>
+        <div class="transform-3d">3D Transform</div>
+        <div class="animated">Bouncing Box</div>
+        
+        <h2>CSS Image Effects</h2>
+        <img class="styled-image" src="download (1).jpg" alt="Styled Image">
+        <img class="circle-image" src="download.jpg" alt="Circular Image">
+
+        <h2>Buttons & Tooltips</h2>
+        <button class="btn">Click Me</button>
+        <div class="tooltip">Hover Me
+            <span class="tooltip-text">Tooltip Example</span>
+        </div>
+
+        <h2>Pagination</h2>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+</body>
+</html>

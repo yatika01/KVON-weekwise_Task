@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard UI</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+    <div class="sidebar">
+        <h2 class="sidebar-title">Dashboard</h2>
+        <label for="sidebar-toggle" class="sidebar-toggle-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="sidebar-content">
+            <ul>
+                <li><i class="fas fa-home"></i> <span>Home</span></li>
+                <li><i class="fas fa-users"></i> <span>Users</span></li>
+                <li><i class="fas fa-chart-bar"></i> <span>Sales</span></li>
+                <li><i class="fas fa-credit-card"></i> <span>Transactions</span></li>
+                <li><i class="fas fa-cog"></i> <span>Settings</span></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="main-content">
+        <div class="navbar">
+            <input type="text" placeholder="Search...">
+            <div class="toggle-container">
+                    <span>Dark Mode</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" onclick="toggleDarkMode()">
+                        <span class="slider"></span>
+                    </label>
+            </div>
+            <div class="profile-container" onclick="toggleProfileDropdown()">
+                👤 Profile
+                <div class="profile-dropdown">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="card user-stats">
+                <div class="icon-container">
+                    <i class="fas fa-users user-icon"></i>
+                </div>
+                <div class="user-details">
+                    <h3>Total Users</h3>
+                    <p>1,250 Active Users</p>
+                    <p>+10% Increase This Month</p>
+                </div>
+            </div>
+            
+            <div class="card user-stats">
+                <div class="icon-container">
+                    <i class="fas fa-user-plus new-user-icon"></i>
+                </div>
+                <div class="user-details">
+                    <h3>New Registrations</h3>
+                    <p>350 New Users</p>
+                    <p>+5% Growth Rate</p>
+                </div>
+            </div>
+            
+            <div class="card user-stats">
+                <div class="icon-container">
+                    <i class="fas fa-user-check active-user-icon"></i>
+                </div>
+                <div class="user-details">
+                    <h3>Active Users</h3>
+                    <p>890 Daily Active Users</p>
+                    <p>+7% Engagement Rate</p>
+                </div>
+            </div>
+            
+            <div class="card transactions-card">
+                <h3>Recent Transactions</h3>
+                <div class="table-container">
+                    <table class="transactions-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Transaction ID</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Payment Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="download.png" alt="User" class="user-img">
+                                        <span>John Doe</span>
+                                    </div>
+                                </td>
+                                <td>#TXN12345</td>
+                                <td>$150.00</td>
+                                <td><span class="status success">Completed</span></td>
+                                <td>2025-03-15</td>
+                                <td>Credit Card</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="download (1).png" alt="User" class="user-img">
+                                        <span>Jane Smith</span>
+                                    </div>
+                                </td>
+                                <td>#TXN12346</td>
+                                <td>$200.00</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>2025-03-14</td>
+                                <td>PayPal</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="download (5).jpg" alt="User" class="user-img">
+                                        <span>Mark Wilson</span>
+                                    </div>
+                                </td>
+                                <td>#TXN12347</td>
+                                <td>$320.00</td>
+                                <td><span class="status failed">Failed</span></td>
+                                <td>2025-03-13</td>
+                                <td>Bank Transfer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <div class="sales-graph">
+                <h3>Sales Overview</h3>
+                <div class="bar-chart">
+                    <div class="bar-container">
+                        <div class="bar" style="height: 60px; background: #FF5733;"></div>
+                        <div class="bar-label">Jan</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="height: 100px; background: #33A1FF;"></div>
+                        <div class="bar-label">Feb</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="height: 140px; background: #28A745;"></div>
+                        <div class="bar-label">Mar</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="height: 90px; background: #FFC107;"></div>
+                        <div class="bar-label">Apr</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="height: 120px; background: #6F42C1;"></div>
+                        <div class="bar-label">May</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <div class="card notifications">
+                <h3>Notifications</h3>
+                <ul class="notification-list">
+                    <li class="notification new">
+                        <i class="fas fa-bell alert"></i>
+                        <span>New user registered</span>
+                        <small>Just now</small>
+                    </li>
+                    <li class="notification">
+                        <i class="fas fa-shopping-cart success"></i>
+                        <span>Order #2356 completed</span>
+                        <small>5 min ago</small>
+                    </li>
+                    <li class="notification">
+                        <i class="fas fa-exclamation-triangle warning"></i>
+                        <span>Server response slow</span>
+                        <small>10 min ago</small>
+                    </li>
+                    <li class="notification">
+                        <i class="fas fa-user-check info"></i>
+                        <span>Admin approved a request</span>
+                        <small>15 min ago</small>
+                    </li>
+                </ul>
+            </div>
+            
+    
+    <div class="notification-popup">🔔 You have a new notification!</div>
+
+    <script>
+        function toggleDarkMode() { document.body.classList.toggle('dark-mode'); }
+        function toggleDropdown(element) { document.querySelectorAll('.card').forEach(card => { if (card !== element) card.classList.remove('active'); }); element.classList.toggle('active'); }
+        function toggleSidebar() { document.querySelector('.sidebar').classList.toggle('collapsed'); document.querySelector('.main-content').classList.toggle('collapsed'); }
+        function toggleProfileDropdown() { document.querySelector('.profile-container').classList.toggle('active'); }
+    
+        document.addEventListener("click", function (event) {
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarCheckbox = document.getElementById("sidebar-toggle");
+    
+    // If sidebar is expanded and user clicks outside, collapse it
+    if (sidebarCheckbox.checked && !sidebar.contains(event.target)) {
+        sidebarCheckbox.checked = false;
+    }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Innovate the Future</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar with Off-Canvas -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">InnovateX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end d-none d-lg-block" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Off-Canvas Menu -->
+<div class="offcanvas offcanvas-end text-bg-dark" style="width: 60%;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="services.html">Services</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Slide 1 - Welcome Slide -->
+        <div class="carousel-item active" style="background: linear-gradient(135deg, #343a40, #495057);">
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-end h-100 text-end px-5">
+                <h1 class="display-3 fw-bold text-white mb-3">Welcome to <span class="text-warning">InnovateX</span></h1>
+                <p class="lead text-light mb-4">Innovate the Future with Us</p>
+                <a href="about.html" class="btn btn-warning btn-lg"><i class="fas fa-info-circle me-2"></i>Learn More</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Our Process -->
+        <div class="carousel-item" style="background: linear-gradient(135deg, #343a40, #495057);">
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                <h1 class="display-4 fw-bold text-white mb-3">Our <span class="text-warning">Process</span></h1>
+                <ul class="list-unstyled process-list text-white">
+                    <li class="mb-3"><i class="fas fa-lightbulb text-warning me-2"></i> <strong>Idea Generation</strong> - Bring creative solutions</li>
+                    <li class="mb-3"><i class="fas fa-cogs text-warning me-2"></i> <strong>Development & Design</strong> - Build with precision</li>
+                    <li><i class="fas fa-rocket text-warning me-2"></i> <strong>Deployment</strong> - Launch with confidence</li>
+                </ul>
+                <a href="#process" class="btn btn-outline-light btn-lg mt-3"><i class="fas fa-tasks me-2"></i>Explore Process</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 - Meet Our Team -->
+        <div class="carousel-item" style="background: linear-gradient(135deg, #343a40, #495057);">
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-center px-5">
+                <h1 class="display-4 fw-bold text-white mb-3">Meet Our <span class="text-warning">Team</span></h1>
+                <p class="lead text-light mb-4">A passionate team dedicated to delivering the best</p>
+                <a href="#team" class="btn btn-warning btn-lg"><i class="fas fa-users me-2"></i>Meet the Team</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</header>
+
+
+
+<!-- Services Section -->
+<section id="services" class="py-5" >
+    <div class="container mb-1">
+        <h2 class="text-center mb-5" style="font-weight: bold;">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="services.html" class="text-decoration-none">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-laptop-code service-icon mb-3"></i>
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">We create responsive and engaging websites that deliver a seamless user experience.</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-4">
+                <a href="services.html" class="text-decoration-none">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-mobile-alt service-icon mb-3"></i>
+                        <h5 class="card-title">App Development</h5>
+                        <p class="card-text">Our team builds intuitive and high-performing mobile applications.</p>
+                    </div>
+                </div>   
+            </a>
+            </div>
+            <div class="col-md-4">
+                <a href="services.html" class="text-decoration-none">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line service-icon mb-3"></i>
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">We boost your business visibility through effective digital marketing strategies.</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-4">
+                <a href="services.html" class="text-decoration-none">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-cloud-upload-alt service-icon mb-3"></i>
+                        <h5 class="card-title">cloud computing</h5>
+                        <p class="card-text">We boost your business visibility through effective digital marketing strategies.</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-file-alt service-icon mb-3"></i>
+                        <h5 class="card-title">Content Writting</h5>
+                        <p class="card-text">We boost your business visibility through effective digital marketing strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-solid fa-code service-icon mb-3"></i>
+                        <h5 class="card-title">Software Development</h5>
+                        <p class="card-text">We boost your business visibility through effective digital marketing strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="process" class="container-fluid p-0">
+    <div class="container-fluid d-flex justify-content-center align-items-center p-0">
+        <img src="process.png" alt="Process We Follow" class="img-fluid w-100 h-auto">
+    </div>
+</section>
+
+
+
+<!-- Projects Section with Cards and Modal -->
+<section id="projects" class="py-5" style="background-color: #ffc107;">
+    <div class="container">
+      <h2 class="text-center mb-5" style="font-weight: bold;">Projects</h2>
+      <div class="row justify-content-center gap-4">
+        <div class="col-md-4">
+          <div class="card shadow-lg">
+            <img src="velvwtbrews.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Velvet Brew App</h5>
+              <p class="card-text">Coffee ordering app using React Native and Zustand.</p>
+              <button class="btn btn-outline" style="color: #ffc107;" data-bs-toggle="modal" data-bs-target="#projectModal1">Details</button>
+            </div> 
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-lg">
+            <img src="Screenshot (4).png" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Dashboard UI</h5>
+              <p class="card-text">Designed and developed an intuitive and responsive dashboard user interface using HTML and CSS</p>
+              <button class="btn btn-outline" style="color: #ffc107;" data-bs-toggle="modal" data-bs-target="#projectModal2">Details</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Project Modal -->
+  <div class="modal fade" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Velvet Brew App</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            A complete coffee ordering app built with React Native and Zustand. It allows users to search, favorite,
+            and order coffee seamlessly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="projectModal2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dashboard UI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            A responsive and feature-rich dashboard interface designed using HTML, CSS, and Bootstrap.
+            The UI offers easy-to-navigate sections, data visualization, and real-time statistics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer -->
+<footer class="text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About InnovateX</h5>
+                <hr class="my-1" style="width: 80%;">
+                <p>We are a leading tech company focused on delivering innovative solutions to drive business success.</p>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h5>Quick Links</h5>
+                <hr class="my-1" style="width: 60%;">
+                <div class="footer-links">
+                    <a href="about.html">About Us</a><br>
+                    <a href="services.html">Services</a><br>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <hr class="my-1" style="width: 50%;">
+                <a href="https://github.com/yatika01" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/yatika-kumawat/" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-white" target="_blank" data-bs-toggle="tooltip" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        <hr class="my-3">
+        <p class="text-center mb-0">&copy; 2025 InnovateX | All rights reserved.</p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    
+
+
+</script>
+</body>
+</html>

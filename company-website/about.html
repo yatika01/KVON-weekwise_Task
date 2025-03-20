@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - InnovateX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">InnovateX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end d-none d-lg-block" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Off-Canvas Menu -->
+<div class="offcanvas offcanvas-end text-bg-dark" style="width: 60%;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="services.html">Services</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Banner Section -->
+<section class="bg-dark text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">About <span class="text-warning">InnovateX</span></h1>
+        <p class="lead">Innovating the Future with Cutting-Edge Solutions</p>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="team.avif" alt="About Us" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold">Who We Are</h2>
+                <p class="lead">InnovateX is a technology-driven company providing innovative solutions that empower businesses to achieve excellence. Our team of experts collaborates with clients to drive growth through technology.</p>
+                <p>We focus on delivering top-notch software development, business automation, and AI-driven innovations to help companies stay ahead of the curve.</p>
+                <a href="services.html" class="btn btn-warning mt-3">Explore Our Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Our Expertise Section -->
+<section id="expertise" class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Our Expertise</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card expertise-box p-4 text-center" onclick="showExpertise('web', this)">
+                    <i class="fas fa-code expertise-icon mb-3"></i>
+                    <h5 class="fw-bold">Web Development</h5>
+                    <p class="text-muted">Creating dynamic and scalable websites.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card expertise-box p-4 text-center" onclick="showExpertise('app', this)">
+                    <i class="fas fa-mobile-alt expertise-icon mb-3"></i>
+                    <h5 class="fw-bold">App Development</h5>
+                    <p class="text-muted">Building intuitive mobile applications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card expertise-box p-4 text-center" onclick="showExpertise('ai', this)">
+                    <i class="fas fa-brain expertise-icon mb-3"></i>
+                    <h5 class="fw-bold">AI & ML Solutions</h5>
+                    <p class="text-muted">Enhancing business processes with AI.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Content Display -->
+        <div id="expertise-content" class="expertise-content mt-5 p-4 bg-light border rounded shadow">
+            <div id="web-content" class="expertise-details">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="web-dev.avif" class="img-fluid rounded" alt="Web Development">
+                    </div>
+                    <div class="col-lg-6 text-start">
+                        <h4 class="fw-bold">Web Development</h4>
+                        <p>We specialize in developing responsive, high-performance websites that cater to your business goals. Our team has delivered numerous successful projects across industries.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="app-content" class="expertise-details">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="app-dev.avif" class="img-fluid rounded" alt="App Development">
+                    </div>
+                    <div class="col-lg-6 text-start">
+                        <h4 class="fw-bold">App Development</h4>
+                        <p>We create innovative mobile applications with user-friendly interfaces that provide seamless experiences across Android and iOS platforms.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="ai-content" class="expertise-details">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="ai-ml.avif" class="img-fluid rounded" alt="AI & ML Solutions">
+                    </div>
+                    <div class="col-lg-6 text-start">
+                        <h4 class="fw-bold">AI & ML Solutions</h4>
+                        <p>We leverage artificial intelligence and machine learning technologies to automate processes and improve decision-making for businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="stats" class="py-5 bg-light" style="background: linear-gradient(to right, rgba(255, 193, 7, 0.2),rgba(255, 193, 7, 0.2));">
+    <div class="container text-center">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="p-4 shadow-sm bg-white rounded border-start border-warning border-4">
+                    <h2 class="fw-bold text-dark">10,000+</h2>
+                    <p class="text-muted mb-0">Active Users</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 shadow-sm bg-white rounded border-start border-primary border-4">
+                    <h2 class="fw-bold text-dark">20+</h2>
+                    <p class="text-muted mb-0">Years of Experience</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 shadow-sm bg-white rounded border-start border-success border-4">
+                    <h2 class="fw-bold text-dark">500+</h2>
+                    <p class="text-muted mb-0">Successful Projects</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 shadow-sm bg-white rounded border-start border-danger border-4">
+                    <h2 class="fw-bold text-dark">200+</h2>
+                    <p class="text-muted mb-0">Skilled Professionals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="process" class="container-fluid p-0">
+    <div class="container-fluid d-flex justify-content-center align-items-center p-0">
+        <img src="process.png" alt="Process We Follow" class="img-fluid w-100 h-auto">
+    </div>
+</section>
+
+
+<!-- Our Team Section -->
+<section id=team class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Meet Our <span class="text-warning">Team</span></h2>
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="ceo.avif" class="card-img" alt="Team Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">willianson</h5>
+                        <p class="card-text">CEO & Founder</p>
+                        <a href="#" class="btn btn-outline-warning btn-sm"><i class="fab fa-linkedin"></i> Connect</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="cto.avif" class="card-img" alt="Team Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">jessika</h5>
+                        <p class="card-text">CTO & Co-Founder</p>
+                        <a href="#" class="btn btn-outline-warning btn-sm"><i class="fab fa-linkedin"></i> Connect</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="hod.avif" class="card-img" alt="Team Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">yang Lee</h5>
+                        <p class="card-text">Head of Design</p>
+                        <a href="#" class="btn btn-outline-warning btn-sm"><i class="fab fa-linkedin"></i> Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About InnovateX</h5>
+                <hr class="my-1" style="width: 80%;">
+                <p>We are a leading tech company focused on delivering innovative solutions to drive business success.</p>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h5>Quick Links</h5>
+                <hr class="my-1" style="width: 60%;">
+                <div class="footer-links">
+                    <a href="about.html">About Us</a><br>
+                    <a href="services.html">Services</a><br>
+                    <a href="contact.html">Contact</a><br>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <hr class="my-1" style="width: 50%;">
+                <a href="https://github.com/yatika01" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/yatika-kumawat/" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white me-3" target="_blank" data-bs-toggle="tooltip" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-white" target="_blank" data-bs-toggle="tooltip" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        <hr class="my-3">
+        <p class="text-center mb-0">&copy; 2025 InnovateX | All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showExpertise(type, element) {
+        // Hide all expertise content
+        document.querySelectorAll('.expertise-details').forEach(function (el) {
+            el.style.display = 'none';
+        });
+
+        // Remove 'active' class from all cards
+        document.querySelectorAll('.expertise-box').forEach(function (el) {
+            el.classList.remove('active');
+        });
+
+        // Show the selected expertise content
+        document.getElementById(`${type}-content`).style.display = 'block';
+
+        // Add 'active' class to the clicked card
+        element.classList.add('active');
+
+        // Display the content section if hidden
+        document.getElementById('expertise-content').style.display = 'block';
+    }
+</script>
+</body>
+</html>

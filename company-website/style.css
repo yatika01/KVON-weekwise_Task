@@ -1,0 +1,111 @@
+body,html {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+}
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.carousel-item {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.process-list li {
+    margin-bottom: 1rem;
+}
+
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card {
+    height: 100%;
+  } 
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+.modal-content {
+    background-color: #f8f9fa;
+  }
+  
+  #projects .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+  footer {
+    background-color: #343a40;
+    color: #fff;
+}
+footer a {
+    color: #ffc107;
+}
+.footer-links a {
+    margin: 0 10px;
+}
+.service-icon {
+    font-size: 3rem;
+    color: #ffc107;
+}
+
+.expertise-box {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.expertise-box:hover {
+    background-color: #ffc107;
+    color: #343a40;
+    transform: translateY(-5px);
+}
+
+.expertise-box.active {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.expertise-content {
+    display: none;
+    border-top: 3px solid #ffc107;
+}
+
+.expertise-details {
+    display: none;
+}
+
+
+.accordion-button {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #ffc107;
+}
+
+
+
+
+
+

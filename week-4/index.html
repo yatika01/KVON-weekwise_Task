@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics with Examples</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease-in-out;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .btn-hover:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .output-box {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">JS Live Examples</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#js-basics">JS Basics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#js-objects">Objects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#js-functions">Functions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#js-classes">Classes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#js-async">Async & Await</a></li>
+                <li class="nav-item"><a class="nav-link" href="#js-dom-bom">DOM vs BOM</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Section: JS Basics with Form Example -->
+        <section id="js-basics" class="mb-5">
+            <h2 class="section-title">JavaScript Basics</h2>
+            <p>Enter your name and see it in an alert:</p>
+            <form id="nameForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                </div>
+                <button type="button" class="btn btn-primary btn-hover" onclick="showName()">Show Name</button>
+            </form>
+        </section>
+
+        <!-- Section: Objects with Live Output -->
+        <section id="js-objects" class="mb-5">
+            <h2 class="section-title">Objects in JavaScript</h2>
+            <p>Click the button to display object properties:</p>
+            <button class="btn btn-success btn-hover" onclick="displayObject()">Show Object Info</button>
+            <div id="objectOutput" class="output-box"></div>
+        </section>
+
+        <!-- Section: Functions with Button Interaction -->
+        <section id="js-functions" class="mb-5">
+            <h2 class="section-title">Functions in JavaScript</h2>
+            <p>Click the button to change the background color:</p>
+            <button id="colorBtn" class="btn btn-warning btn-hover" onclick="changeColor()">Change Color</button>
+        </section>
+
+        <!-- Section: Classes with Dynamic Result -->
+        <section id="js-classes" class="mb-5">
+            <h2 class="section-title">Classes in JavaScript</h2>
+            <p>Click to create a car object and display its details:</p>
+            <button class="btn btn-info btn-hover" onclick="createCar()">Create Car</button>
+            <div id="classOutput" class="output-box"></div>
+        </section>
+
+        <!-- Section: Async/Await with Live Data Fetching -->
+        <section id="js-async" class="mb-5">
+            <h2 class="section-title">Async and Await</h2>
+            <p>Fetch data from an API and display it below:</p>
+            <button class="btn btn-danger btn-hover" onclick="fetchData()">Fetch Data</button>
+            <div id="dataOutput" class="output-box"></div>
+        </section>
+
+         <!-- Section: DOM and BOM with Live Demo -->
+         <section id="js-dom-bom" class="mb-5">
+            <h2 class="section-title">DOM vs BOM - Live Example</h2>
+            <p>Click to see DOM and BOM in action:</p>
+            
+            <div id="domElement">This is a DOM element.</div>
+            <button class="btn btn-secondary btn-hover mt-2" onclick="modifyDOM()">Change DOM</button>
+            <button class="btn btn-secondary btn-hover mt-2" onclick="useBOM()">Show BOM Info</button>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="btn btn-primary btn-hover scroll-top" id="scrollTopBtn">⬆️ Top</button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2025 JS Live Examples | Created by Yatika Kumawat
+    </footer>
+
+    <!-- Bootstrap JS + Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for Interactions -->
+    <script>
+        // Show Name in Alert
+        function showName() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                alert(`Hello, ${name}!`);
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+
+        // Display Object Properties
+        function displayObject() {
+            const person = {
+                name: 'Yatika',
+                age: 23,
+                hobby: 'Basketball'
+            };
+            document.getElementById('objectOutput').innerHTML = 
+                `Name: ${person.name} <br> Age: ${person.age} <br> Hobby: ${person.hobby}`;
+        }
+
+        // Change Button Background Color
+        function changeColor() {
+            const btn = document.getElementById('colorBtn');
+            const colors = ['#ff4c4c', '#4caf50', '#2196f3', '#ff9800'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            btn.style.backgroundColor = randomColor;
+        }
+
+        // Create Car Class and Show Output
+        class Car {
+            constructor(brand, model) {
+                this.brand = brand;
+                this.model = model;
+            }
+
+            details() {
+                return `Car: ${this.brand} - ${this.model}`;
+            }
+        }
+
+        function createCar() {
+            const myCar = new Car('Toyota', 'Camry');
+            document.getElementById('classOutput').innerText = myCar.details();
+        }
+
+        // Fetch Data using Async/Await
+        async function fetchData() {
+            try {
+                let response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+                let data = await response.json();
+                document.getElementById('dataOutput').innerHTML = 
+                    `<strong>${data.title}</strong><br>${data.body}`;
+            } catch (error) {
+                document.getElementById('dataOutput').innerText = 'Error fetching data.';
+            }
+        }
+
+         // DOM Example: Modify DOM Content and Style
+         function modifyDOM() {
+            const domElement = document.getElementById('domElement');
+            domElement.innerHTML = 'DOM content modified!';
+            domElement.style.backgroundColor = '#ffc107';
+            domElement.style.color = '#000';
+            domElement.style.border = '2px solid #333';
+        }
+
+        // BOM Example: Open New Window and Show Info
+        function useBOM() {
+            // Show window properties in alert
+            alert(`Current URL: ${window.location.href}`);
+            
+            // Open a new window
+            window.open('https://www.google.com', '_blank', 'width=500,height=500');
+        }
+        
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animate Sections on Scroll
+        const sections = document.querySelectorAll('.section-title');
+        window.addEventListener('scroll', function () {
+            sections.forEach(section => {
+                const position = section.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight / 1.3;
+                if (position < screenHeight) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript APIs Demonstration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .output-box {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">JS APIs Demo</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#forms-api">Forms API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#history-api">History API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#storage-api">Storage API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#worker-api">Worker API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fetch-api">Fetch API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#geolocation-api">Geolocation API</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Section: Web Forms API -->
+        <section id="forms-api" class="mb-5">
+            <h2 class="section-title">📄 Web Forms API</h2>
+            <p>Submit the form and check its validity.</p>
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="validateForm()">Validate Form</button>
+                <div id="formOutput" class="output-box"></div>
+            </form>
+        </section>
+
+        <!-- Section: Web History API -->
+        <section id="history-api" class="mb-5">
+            <h2 class="section-title">🕰️ Web History API</h2>
+            <p>Navigate between pages using History API.</p>
+            <button class="btn btn-info" onclick="goBack()">Go Back</button>
+            <button class="btn btn-info" onclick="goForward()">Go Forward</button>
+        </section>
+
+        <!-- Section: Web Storage API -->
+        <section id="storage-api" class="mb-5">
+            <h2 class="section-title">📦 Web Storage API</h2>
+            <p>Store and retrieve data using LocalStorage.</p>
+            <input type="text" id="storageInput" class="form-control mb-2" placeholder="Enter something to save">
+            <button class="btn btn-success" onclick="saveData()">Save to LocalStorage</button>
+            <button class="btn btn-secondary" onclick="getData()">Retrieve from LocalStorage</button>
+            <div id="storageOutput" class="output-box"></div>
+        </section>
+
+        <!-- Section: Web Worker API -->
+        <section id="worker-api" class="mb-5">
+            <h2 class="section-title">🧵 Web Worker API</h2>
+            <p>Perform background tasks without blocking the UI.</p>
+            <button class="btn btn-warning" onclick="startWorker()">Start Worker</button>
+            <button class="btn btn-danger" onclick="stopWorker()">Stop Worker</button>
+            <div id="workerOutput" class="output-box"></div>
+        </section>
+
+        <!-- Section: Web Fetch API -->
+        <section id="fetch-api" class="mb-5">
+            <h2 class="section-title">🌐 Web Fetch API</h2>
+            <p>Fetch data from a public API.</p>
+            <button class="btn btn-danger" onclick="fetchData()">Fetch Data</button>
+            <div id="fetchOutput" class="output-box"></div>
+        </section>
+
+        <!-- Section: Web Geolocation API -->
+        <section id="geolocation-api" class="mb-5">
+            <h2 class="section-title">📍 Web Geolocation API</h2>
+            <p>Get the user's current location.</p>
+            <button class="btn btn-primary" onclick="getLocation()">Get Location</button>
+            <div id="geoOutput" class="output-box"></div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2025 JS APIs Demo | Created by Yatika Kumawat
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // 🎯 Web Forms API
+        function validateForm() {
+            const form = document.getElementById('myForm');
+            if (form.checkValidity()) {
+                document.getElementById('formOutput').innerText = '✅ Form is valid!';
+            } else {
+                document.getElementById('formOutput').innerText = '❌ Form is invalid. Please check again.';
+            }
+        }
+
+        // 🕰️ Web History API
+        function goBack() {
+            window.history.back();
+        }
+
+        function goForward() {
+            window.history.forward();
+        }
+
+        // 📦 Web Storage API
+        function saveData() {
+            const inputValue = document.getElementById('storageInput').value;
+            if (inputValue) {
+                localStorage.setItem('userInput', inputValue);
+                document.getElementById('storageOutput').innerText = '✅ Data saved successfully!';
+            } else {
+                alert('Please enter something to save!');
+            }
+        }
+
+        function getData() {
+            const storedValue = localStorage.getItem('userInput');
+            if (storedValue) {
+                document.getElementById('storageOutput').innerText = `📦 Retrieved: ${storedValue}`;
+            } else {
+                document.getElementById('storageOutput').innerText = '❌ No data found!';
+            }
+        }
+
+        // 🧵 Web Worker API
+        let worker;
+
+        function startWorker() {
+            if (typeof(Worker) !== "undefined") {
+                if (typeof(worker) == "undefined") {
+                    worker = new Worker("worker.js");
+                }
+                worker.onmessage = function(event) {
+                    document.getElementById("workerOutput").innerText = `⏱️ Worker says: ${event.data}`;
+                };
+            } else {
+                document.getElementById("workerOutput").innerText = "❌ Sorry, your browser doesn't support Web Workers.";
+            }
+        }
+
+        function stopWorker() {
+            if (worker) {
+                worker.terminate();
+                worker = undefined;
+                document.getElementById("workerOutput").innerText = "⏹️ Worker Stopped.";
+            }
+        }
+
+        // 🌐 Web Fetch API
+        async function fetchData() {
+            try {
+                const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+                const data = await response.json();
+                document.getElementById('fetchOutput').innerHTML = `
+                    <strong>${data.setup}</strong><br>${data.punchline}
+                `;
+            } catch (error) {
+                document.getElementById('fetchOutput').innerText = '❌ Error fetching data.';
+            }
+        }
+
+        // 📍 Web Geolocation API
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById('geoOutput').innerHTML = `
+                        Latitude: ${position.coords.latitude} <br>
+                        Longitude: ${position.coords.longitude}
+                    `;
+                });
+            } else {
+                document.getElementById('geoOutput').innerText = "❌ Geolocation is not supported by this browser.";
+            }
+        }
+    </script>
+</body>
+</html>

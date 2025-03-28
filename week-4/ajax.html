@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+    background: #f8f9fa;
+}
+
+.card {
+    margin:40px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.8;
+}
+
+.list-group-item {
+    transition: all 0.3s ease;
+}
+
+.list-group-item.fade-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.due-soon {
+    background-color: #fff3cd;
+}
+
+.overdue {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3 class="text-center">📋 Dynamic To-Do List</h3>
+        </div>
+        <div class="card-body">
+            <!-- Add Task Input -->
+            <div class="input-group mb-3">
+                <input type="text" id="taskInput" class="form-control" placeholder="Add a new task...">
+                <input type="date" id="dueDate" class="form-control ml-2" />
+                <div class="input-group-append">
+                    <button class="btn btn-success" onclick="addTask()">➕ Add Task</button>
+                </div>
+            </div>
+
+            <!-- Add Search Input -->
+<div class="input-group mb-3">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search tasks..." onkeyup="filterTasks()">
+</div>
+
+
+            <!-- Task List -->
+            <ul id="taskList" class="list-group"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- JS Script -->
+<script src="script.js"></script>
+</body>
+</html>

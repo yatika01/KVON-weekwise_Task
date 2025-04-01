@@ -1,0 +1,118 @@
+
+/* Container and Card */
+.container {
+    min-height: 100vh;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Tabs */
+.nav-tabs .nav-link {
+    color: #555;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ff9a9e;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #fad0c4;
+    color: #333;
+}
+
+/* Form Inputs */
+form .form-control {
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 10px rgba(255, 154, 158, 0.8);
+    border-color: #ff9a9e;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #ff758c;
+    transform: scale(1.05);
+}
+
+.btn-success:hover {
+    background-color: #57c78f;
+    transform: scale(1.05);
+}
+
+/* Tab Content Animation */
+.tab-content {
+    animation: fadeEffect 0.4s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 0.9rem;
+    }
+
+    form .form-control {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}

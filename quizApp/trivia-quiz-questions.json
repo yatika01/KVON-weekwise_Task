@@ -1,0 +1,41 @@
+{
+    "questions": [
+      {
+        "type": "normal",
+        "question": "What is the capital of France?",
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "correctAnswer": "Paris"
+      },
+      {
+        "type": "normal",
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Jupiter", "Venus"],
+        "correctAnswer": "Mars"
+      },
+      {
+        "type": "drag-drop",
+        "question": "Arrange the planets in order of their distance from the Sun.",
+        "options": ["Venus", "Earth", "Mercury", "Mars"],
+        "correctOrder": ["Mercury", "Venus", "Earth", "Mars"]
+      },
+      {
+        "type": "drag-drop",
+        "question": "Rearrange the following HTML tags in the correct order to create a basic webpage.",
+        "options": ["<html>", "<body>", "<!DOCTYPE html>", "</html>", "</body>"],
+        "correctOrder": ["<!DOCTYPE html>", "<html>", "<body>", "</body>", "</html>"]
+      },
+      {
+        "type": "normal",
+        "question": "What does CSS stand for?",
+        "options": ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets", "Colorful Style Sheets"],
+        "correctAnswer": "Cascading Style Sheets"
+      },
+      {
+        "type": "drag-drop",
+        "question": "Arrange the lifecycle methods of a React component in order.",
+        "options": ["componentDidMount", "render", "constructor", "componentWillUnmount"],
+        "correctOrder": ["constructor", "render", "componentDidMount", "componentWillUnmount"]
+      }
+    ]
+  }
+  

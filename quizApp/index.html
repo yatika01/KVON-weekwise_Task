@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">QuizKwik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <button id="dark-mode-toggle" class="btn btn-outline-secondary">
+                    <i id="dark-mode-icon" class="fas fa-moon"></i>
+                </button>
+                <a href="trivia.html" class="nav-link mx-2">Trivia</a>
+                <a href="quiz.html" class="nav-link mx-2">Quiz</a>
+                <a href="index.html#leaderboard-section" class="nav-link mx-2">Leaderboard</a>
+                <a href="login.html" class="btn btn-primary mx-2">Login</a>
+                <a href="login.html" class=" btn btn-primary mx-2" >SignUp</a>
+                <button  id="logout-btn" class="btn btn-danger mx-2">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="hero-content">
+                <h1>Daily Quiz, Daily Bonus - Play Today!</h1>
+                <p>QuizKwik is the daily trivia and quiz platform. It brings exciting surprises every day.</p>
+                <a href="quiz.html" class="btn btn-primary">Start Now</a>
+            </div>
+            <div class="hero-gif">
+                <img src="images/giphy.webp" alt="Quiz Animation" class="img-fluid" style="height:270px; " >
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left Side - Quiz Options -->
+            <div class="col-lg-8" style="padding-left: 15px;">
+                <section class="quiz-options">
+                    <div class="row">
+                        <!-- Left Section -->
+                        <div class="col-md-4 choose-section text-white p-4 rounded">
+                            <h5>Choose the option</h5>
+                            <p>Go to study in the year of your choice</p>
+                        </div>
+                        <!-- Right Section - Quiz Cards -->
+                        <div class="col-md-8" >
+                            <div class="list-group">
+                                <a href="trivia.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center option">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/giift.jpg" alt="Daily Trivia" class="icon me-3">
+                                        Daily Trivia
+                                    </div>
+                                    <span class="arrow">→</span>
+                                </a>
+                                <a href="quiz.html" class="list-group-item list-group-item-action  d-flex justify-content-between align-items-center option">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/badge.jpg" alt="Daily Play & Win" class="icon me-3">
+                                        Daily Play & Win
+                                    </div>
+                                    <span class="arrow">→</span>
+                                </a>
+                                <a href="quiz.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center option">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/crown.jpg" alt="Play Like King" class="icon me-3">
+                                        Play Like King
+                                    </div>
+                                    <span class="arrow">→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Winners Section -->
+<section class="winners py-5 mt-3">
+    <div class="container text-center">
+        <h2 class="mb-4" style="font-weight: bold;">QuizKwik TOP Scorers This Week</h2>
+        <div class="row justify-content-center">
+            <!-- Winner 1 -->
+            <div class="col-md-6 mb-3">
+                <div class="winner-card d-flex align-items-center p-3 bg-white shadow-sm rounded">
+                    <img src="images/Top-winner1.jpg" alt="Jonathan Doe" class="rounded-circle me-3" width="60" height="60">
+                    <div class="text-start">
+                        <h5 class="mb-1">Jonathan Doe</h5>
+                        <p class="text-muted mb-0">First Place</p>
+                    </div>
+                    <div class="ms-auto">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill">🥇 Gold</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Winner 2 -->
+            <div class="col-md-6 mb-3">
+                <div class="winner-card d-flex align-items-center p-3 bg-white shadow-sm rounded">
+                    <img src="images/TopWinner2.jpg" alt="Mahmud Saimon" class="rounded-circle me-3" width="60" height="60">
+                    <div class="text-start">
+                        <h5 class="mb-1">Mahmud Saimon</h5>
+                        <p class="text-muted mb-0">Second Place</p>
+                    </div>
+                    <div class="ms-auto">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill">🥈 Silver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- How It Works -->
+    <section class="how-it-works container text-center ">
+        <h2 class="mb-5">Here's How It Works</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <!-- Step 1 -->
+            <div class="step-card mx-2 mb-4 mb-md-0">
+                <div class="icon-container">
+                    <span class="step-number">1</span>
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h5 class="mt-3">Play the Game</h5>
+                <p>Choose a category and start the quiz.</p>
+            </div>
+            <!-- Dotted Connector (Hidden on Mobile) -->
+            <div class="d-none d-md-block dotted-connector"></div>
+            <!-- Step 2 -->
+            <div class="step-card mx-2 mb-4 mb-md-0">
+                <div class="icon-container">
+                    <span class="step-number">2</span>
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h5 class="mt-3">Earn Badges</h5>
+                <p>Get points for each correct answer.</p>
+            </div>
+            <!-- Dotted Connector (Hidden on Mobile) -->
+            <div class="d-none d-md-block dotted-connector"></div>
+            <!-- Step 3 -->
+            <div class="step-card mx-2">
+                <div class="icon-container">
+                    <span class="step-number">3</span>
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h5 class="mt-3">Be on Top</h5>
+                <p>Climb the leaderboard and win prizes.</p>
+            </div>
+        </div>
+    </section>    
+            </div>
+    
+            <!-- Right Side Section -->
+            <div class="col-lg-4 d-flex flex-column gap-4 mt-3 mt-lg-0">
+                <!-- About QuizKwik -->
+                <div class="card p-4 shadow-sm mx-auto w-100" >
+                    <h4>About QuizKwik</h4>
+                    <p class="text-muted">
+                        QuizKwik is an engaging and interactive platform designed to test your knowledge in various domains.
+                        Choose from a variety of quizzes and climb the leaderboard to prove your expertise!
+                    </p>
+                </div>
+    
+                <!-- Categories  -->
+                <div class="card p-4 shadow-sm mx-auto w-100">
+                    <h4> Quiz Categories</h4>
+                    <div class="accordion mt-3" id="quizAccordion">
+                        <!-- HTML Quiz -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="htmlHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#htmlCollapse" aria-expanded="true" aria-controls="htmlCollapse">
+                                    <img src="images/html.jpg" alt="HTML Quiz" class="category-icon me-2"> Quiz on HTML
+                                </button>
+                            </h2>
+                            <div id="htmlCollapse" class="accordion-collapse collapse show" aria-labelledby="htmlHeading" data-bs-parent="#quizAccordion">
+                                <div class="accordion-body">
+                                    Learn about HTML tags, attributes, forms, and structure. Perfect for web development enthusiasts.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- JavaScript Quiz -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="jsHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jsCollapse" aria-expanded="false" aria-controls="jsCollapse">
+                                    <img src="images/js.jpg" alt="JavaScript Quiz" class="category-icon me-2"> Quiz on JavaScript
+                                </button>
+                            </h2>
+                            <div id="jsCollapse" class="accordion-collapse collapse" aria-labelledby="jsHeading" data-bs-parent="#quizAccordion">
+                                <div class="accordion-body">
+                                    Explore JavaScript concepts, including variables, functions, loops, DOM manipulation, and more.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- General Knowledge Quiz -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gkHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gkCollapse" aria-expanded="false" aria-controls="gkCollapse">
+                                    <img src="images/GK.jpg" alt="General Knowledge" class="category-icon me-2"> Quiz on General Knowledge
+                                </button>
+                            </h2>
+                            <div id="gkCollapse" class="accordion-collapse collapse" aria-labelledby="gkHeading" data-bs-parent="#quizAccordion">
+                                <div class="accordion-body">
+                                    Test your knowledge on history, geography, current events, and other general topics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div id="leaderboard-section" class="card p-4 shadow-sm mx-auto w-100">
+                    <h5 class="mb-3">Leaderboard:</h5>
+                    <div id="leaderboard-preview" class="leaderboard-preview text-white p-3 rounded" style="background-color: #23bfb8;">
+                        <!-- Dynamic scores will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; QuizWik. All rights reserved.</p>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

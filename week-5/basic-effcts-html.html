@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Picker Game</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #eeeeee;
+      transition: background-color 0.5s;
+    }
+    .color-btn {
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #targetColor {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    #result {
+  display: none;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+  </style>
+</head>
+<body>
+
+  <h1>🎨 Color Picker Game</h1>
+  <p id="targetColor">Target Color: <span></span></p>
+
+  <div id="buttons"></div>
+
+  <div id="result"></div>
+
+  <script src="basic-effect-html.js"></script>
+
+</body>
+</html>

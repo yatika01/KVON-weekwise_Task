@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Traversing - Beginner Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    li { cursor: pointer; padding: 5px; }
+    li:hover { background-color: #eee; }
+    .selected { background-color: yellow; }
+    button { margin: 5px; padding: 8px; }
+    #output { margin-top: 20px; background: #fff; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1> jQuery Traversing Demo</h1>
+  <p>Click a list item, then use buttons to traverse!</p>
+  <ul>
+    <li>Item A
+      <ul>
+        <li>Item A1</li>
+        <li>Item A2
+          <ul>
+            <li>Item A2.1</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Item B</li>
+    <li>Item C</li>
+  </ul>
+  <br>
+  <button id="parent">Parent</button>
+  <button id="children">Children</button>
+  <button id="siblings">Siblings</button>
+  <button id="find">Find</button>
+  <button id="closest">Closest UL</button>
+  <button id="clear">Clear</button>
+
+  <div id="output">Output will show here...</div>
+
+  <script src="traversing.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple jQuery AJAX Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f0ebeb; }
+    button, input, textarea { margin: 10px 0; padding: 8px; }
+    #posts, #response { margin-top: 15px; background: #fff; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>jQuery AJAX Demo</h2>
+
+  <h3>📥 GET Request: Load Dummy Posts</h3>
+  <button id="loadPosts">Load Posts</button>
+  <div id="loader" style="display:none; font-weight: bold;">⏳ Loading...</div>
+  <div id="posts"></div>
+
+  <h3>📝 POST Request: Submit a Comment</h3>
+  <input type="text" id="name" placeholder="Your Name"><br>
+  <textarea id="comment" placeholder="Your Comment"></textarea><br>
+  <button id="submitComment">Submit</button>
+  <div id="response"></div>
+
+  <script src="jquery-ajax.js"></script>
+
+</body>
+</html>

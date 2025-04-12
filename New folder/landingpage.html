@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Velvet Brew – Product Landing Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">Velvet Bloom</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero -->
+<header class="header-section">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-white text-center text-md-start ps-md-5">
+        <h1 class="display-4 fw-bold mb-3 stylish-heading">
+          Welcome to <span class="text-accent">Velvet Bloom</span>
+        </h1>
+        <p class="lead mb-4">
+          Luxury skincare & beauty, redefined for every glow.
+        </p>
+        <a href="#products" class="btn btn-outline-light btn-lg">Explore Collection</a>
+      </div>
+
+      <div class="col-md-6 p-0">
+        <img src="images/header1.png" alt="Cosmetics" class="img-fluid rounded-0 w-100">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Products Section -->
+<section id="products" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Our Products</h2>
+    <div class="row" id="card-container"></div>
+  </div>
+  <div class="text-center mt-4">
+    <button id="loadMoreBtn" class="btn btn-primary btn-lg">More Products</button>
+  </div>  
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 about-section text-white">
+  <div class="container">
+    <h2 class="section-title text-center">About Us</h2>
+    <p class="text-center mx-auto w-75">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor molestiae illo quibusdam alias cupiditate assumenda aperiam aliquam, ex quo labore odio excepturi totam nulla odit aspernatur sunt! Harum, reprehenderit nesciunt!
+    </p>
+  </div>
+</section>
+
+<!-- Testimonials + Counters Section -->
+<section id="testimonials" class="py-5 text-center bg-white">
+  <div class="container">
+    <!-- Dynamic Counters -->
+    <div class="row text-primary mb-4">
+      <div class="col-md-4">
+        <h2 class="counter" data-count="5000">0</h2>
+        <p>Happy Customers</p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="counter" data-count="15000">0</h2>
+        <p>Products Sold</p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="counter" data-count="5">0</h2>
+        <p>Years of Experience</p>
+      </div>
+    </div><br>
+    <h2 class="section-title">What Our Customers Say</h2>  
+    <!-- Testimonials -->
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"Absolutely love the serum! My skin glows."</p>
+          <footer class="blockquote-footer">Aarushi K.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"The lipstick lasts all day and looks stunning!"</p>
+          <footer class="blockquote-footer">Neha P.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"I've switched entirely to Velvet Bloom"</p>
+          <footer class="blockquote-footer">Riya M.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Get in Touch</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" placeholder="Your Email">
+          <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+          <button class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Velvet Brew. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

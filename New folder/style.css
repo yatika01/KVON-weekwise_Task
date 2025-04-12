@@ -60,7 +60,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   .about-section {
-    background-image: url('aboutus.webp'); 
+    background-image: url('images/aboutus.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
